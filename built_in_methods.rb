@@ -38,7 +38,12 @@
 # The puts command prints the return value of the start_with? method (true) to the console.
 first_name = "Jeff"
 puts first_name.start_with?("J")
-
+# center method centers the string if the width is greater than the string. It can also pad the string with characters.
+puts "train".center(12)
+puts "gripe".center(32, 'vrg')
+# succ returns the succesor to self. Prints the successor to the rightmost character
+puts "quality".succ
+puts "ZZZZ".succ
 
 
 # SECTION 3: Calling methods on variables assigned to integers.
@@ -46,7 +51,14 @@ puts first_name.start_with?("J")
 # Call a different built-in Ruby method on each of your variables. 
 # https://ruby-doc.org/core-3.1.0/Integer.html
 # Include comments above each method call explaining the impact and return value of that method.
-
+# digits returns an aray of integers, the first element of the array representing the least significant digit.
+row = 218108
+time = 912
+p row.digits
+p time.digits
+# div returns the integer result of dividing self by the given value.
+puts row.div(7)
+puts time.div(5)
 
 
 # SECTION 4: Calling methods on variables assigned to arrays.
@@ -54,3 +66,12 @@ puts first_name.start_with?("J")
 # Call a different built-in Ruby method on each of your variables. 
 # https://ruby-doc.org/core-3.1.0/Array.html
 # Include comments above each method call explaining the impact and return value of that method.
+# shuffle! randomly shuffles elements in the array
+gear = [2, 7, 1, 11, 1, 9]
+total = [43, 49, 55, 52]
+p gear.shuffle!
+p total.shuffle!
+# fill can replace specified elements in the array with the specified element to the end of the array.
+
+p gear.fill(392, 2)
+p total.fill(6, 3)
